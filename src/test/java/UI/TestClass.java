@@ -7,8 +7,8 @@ import Common.BaseTest;
 
 
 public class TestClass extends BaseTest {
-	  
-	@Test
+	
+	@Test(priority=1,description="Login page Functionality", enabled=true)
 	public void Test1() {
 		driver.get(" https://demo.dealsdray.com/");
 		String LoginPageUrl= driver.getCurrentUrl();
@@ -18,13 +18,13 @@ public class TestClass extends BaseTest {
 			System.out.println("TestCase fail");
 		}
 	}
-	@Test
+	@Test(priority=2,description="Login page Functionality", enabled=true)
 	public void Test2() {
 		driver.get(" https://demo.dealsdray.com/");	
 		Boolean Present =driver.findElement(By.cssSelector("[type=\"submit\"]")).isDisplayed();
 	    Assert.assertEquals(Present,true);
 	}
-	@Test
+	@Test(priority=3,description="Login page Functionality", enabled=true)
 	public void Test3()  {
 		driver.get(" https://demo.dealsdray.com/");
 		driver.findElement(By.name("username")).sendKeys("prexo.mis@dealsdray.com");
@@ -34,7 +34,7 @@ public class TestClass extends BaseTest {
 	    Assert.assertEquals(Actual,"DASHBOARD");
 	}
 	
-	@Test
+	@Test(priority=4,description="Login page Functionality", enabled=true)
 	public void Test4()  {
 		driver.get(" https://demo.dealsdray.com/");
 		driver.findElement(By.name("username")).sendKeys("prexo.mis@dealsdray.com");

@@ -5,9 +5,9 @@
     <classes>
       <class name="UI.TestClass">
         <methods>
+          <include name="Test3"/>
           <include name="TearDown"/>
           <include name="run"/>
-          <include name="Test1"/>
         </methods>
       </class> <!-- UI.TestClass -->
     </classes>
